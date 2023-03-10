@@ -37,7 +37,7 @@ function mostrar($vector){
    if($mayor == 0 and $cantidad == 1){
     echo "Cada número aparece exactamente una vez.";
    }else{  
-    echo "El numero mayor es ",$mayor, " y se repite ",$cantidad, " veces.\n";
+      echo "El número mayor es {$mayor} y se repite {$cantidad} veces.\n";
    }}
 
 mostrar($vector1);

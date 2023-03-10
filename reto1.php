@@ -31,12 +31,15 @@ function esPrimo($num) {
 $vector1 = [3, 7, 8, 4, 6, 10, 11];
 $vector2 = [1, 2, 3, 4, 5];
 function mostrar($vector){
-for ($x = 0; $x < count($vector)-1; $x++) {
-    $resultado = array_sum((array_slice($vector,$x,2)));
-    if(esPrimo($resultado)){
-        echo "La suma de ",$vector[$x]," y ",$vector[$x+1], " es el numero primo: ",$resultado,"\n"; 
-    }
-  } 
+foreach($vector as $x){
+  $y = next($vector);
+  $resultado = $x + $y ;
+  if(esPrimo($resultado) and $y != false){
+    echo "La suma de {$x} y {$y} es el número primo: {$resultado}\n";
+  }
+} 
+
+
 }
 
 mostrar($vector1);
